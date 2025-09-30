@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wheel of Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="home-link" onclick="resetApp()">Home</a>
+            <div class="logo">
+                <span class="brand-name">AEG Consulting</span>
+                <img src="aegconsultingcorp_logo.jfif" alt="AEG Consulting Corp" class="logo-img">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="question-screen">
+            <h1 id="category-title">Health</h1>
+            <p class="question-text">How would you rate this area of your life?</p>
+
+            <div class="rating-buttons">
+                <button class="rating-btn" onclick="selectRating(1)">1</button>
+                <button class="rating-btn" onclick="selectRating(2)">2</button>
+                <button class="rating-btn" onclick="selectRating(3)">3</button>
+                <button class="rating-btn" onclick="selectRating(4)">4</button>
+                <button class="rating-btn" onclick="selectRating(5)">5</button>
+                <button class="rating-btn" onclick="selectRating(6)">6</button>
+                <button class="rating-btn" onclick="selectRating(7)">7</button>
+                <button class="rating-btn" onclick="selectRating(8)">8</button>
+                <button class="rating-btn" onclick="selectRating(9)">9</button>
+                <button class="rating-btn" onclick="selectRating(10)">10</button>
+            </div>
+
+            <a href="#" class="skip-link" onclick="skipCategory()">Skip this area - it's not important to me</a>
+
+            <div class="preview-section">
+                <h2>Preview</h2>
+                <div class="chart-container">
+                    <canvas id="previewChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-screen" style="display: none;">
+            <h1>My Wheel of Life</h1>
+            <p class="result-date" id="result-date"></p>
+
+            <div class="result-container">
+                <div class="chart-section">
+                    <div class="chart-wrapper">
+                        <canvas id="resultChart"></canvas>
+                    </div>
+                    <div class="legend" id="legend"></div>
+                </div>
+
+                <div class="actions">
+                    <button class="action-btn" onclick="printResult()">
+                        <span class="icon">🖨️</span> Print
+                    </button>
+                    <button class="action-btn" onclick="downloadPDF()">
+                        <span class="icon">📥</span> Save as PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="brand-name">AEG Consulting</span>
+                <img src="aegconsultingcorp_logo.jfif" alt="AEG Consulting Corp" class="logo-img">
+            </div>
+            <div class="footer-info">
+                <h3 class="footer-name">Salman Hafeez — CEO AEG Consulting</h3>
+                <p class="footer-services">Career Development Coaching | Change Management | Diversity & Inclusion | Executive Coaching | Leadership Development</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

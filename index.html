@@ -24,7 +24,51 @@
     </header>
 
     <main class="container">
-        <div id="question-screen">
+        <!-- User Details Form Screen -->
+        <div id="user-details-screen">
+            <h1>Welcome to Wheel of Life Assessment</h1>
+            <p class="intro-text">Please fill in your details before we begin</p>
+
+            <form id="user-details-form" class="user-form">
+                <div class="form-group">
+                    <label for="userName">Name *</label>
+                    <input type="text" id="userName" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="userDepartment">Department *</label>
+                    <input type="text" id="userDepartment" required placeholder="Enter your department">
+                </div>
+
+                <div class="form-group">
+                    <label for="userTitle">Title *</label>
+                    <input type="text" id="userTitle" required placeholder="Enter your job title">
+                </div>
+
+                <div class="form-group">
+                    <label for="userExperience">Total Experience (years) *</label>
+                    <input type="number" id="userExperience" required placeholder="Enter years of experience" min="0" step="0.5">
+                </div>
+
+                <button type="submit" class="submit-btn">Continue</button>
+            </form>
+        </div>
+
+        <!-- Section Selection Screen -->
+        <div id="section-selection-screen" style="display: none;">
+            <h1>Select Your Life Areas</h1>
+            <p class="intro-text">Choose at least 3 areas you'd like to assess (up to 8)</p>
+
+            <div class="sections-grid" id="sectionsGrid"></div>
+
+            <div class="selection-actions">
+                <p class="selection-count" id="selectionCount">Selected: 0/8</p>
+                <button class="submit-btn" id="continueWithSections" onclick="startQuestionnaire()" disabled>Continue with Selected Areas</button>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="question-screen" style="display: none;">
             <h1 id="category-title">Health</h1>
             <p class="question-text">How would you rate this area of your life?</p>
 
@@ -40,8 +84,6 @@
                 <button class="rating-btn" onclick="selectRating(9)">9</button>
                 <button class="rating-btn" onclick="selectRating(10)">10</button>
             </div>
-
-            <a href="#" class="skip-link" onclick="skipCategory()">Skip this area - it's not important to me</a>
 
             <div class="preview-section">
                 <h2>Preview</h2>
@@ -71,6 +113,13 @@
                         <span class="icon">📥</span> Save as PDF
                     </button>
                 </div>
+            </div>
+
+            <!-- Comments Section on Results Page -->
+            <div class="comments-section">
+                <h2>Share Your Thoughts</h2>
+                <p class="comments-intro">Why did you rate each area the way you did? (Optional)</p>
+                <div id="commentsContainer"></div>
             </div>
         </div>
     </main>

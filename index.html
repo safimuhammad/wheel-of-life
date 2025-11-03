@@ -24,8 +24,124 @@
     </header>
 
     <main class="container">
+        <!-- Landing Page -->
+        <div id="landing-screen">
+            <div class="landing-hero">
+                <h1 class="landing-main-title">The Life G.P.S.</h1>
+                <p class="landing-tagline">Get Priorities Straight</p>
+            </div>
+
+            <div class="landing-intro">
+                <h2 class="landing-headline">Lost in Your Own Life? Recalibrate Your Direction.</h2>
+                <p class="landing-subheadline">The Life GPS is a powerful coaching tool that helps you pinpoint where you are now, so you can navigate to where you want to be.</p>
+            </div>
+
+            <div class="landing-cta-section">
+                <h2 class="landing-cta-title">Get a Clear Picture of Your Life in Just 5 Minutes.</h2>
+                <p class="landing-cta-subtitle">Take the Life GPS assessment to visualize your life balance, discover your strengths, and identify where to focus your energy for greater fulfillment.</p>
+                <button class="cta-btn" onclick="showFAQScreen()">TAKE ASSESSMENT</button>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Key Features & Benefits</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <p>Takes less than a minute to complete</p>
+                    </div>
+                    <div class="feature-item">
+                        <p>100% Free & No Strings Attached—no catch</p>
+                    </div>
+                    <div class="feature-item">
+                        <p>Get an instant visual report you can save or share</p>
+                    </div>
+                    <div class="feature-item">
+                        <p>Pinpoint priorities and set meaningful goals for personal growth</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">How Your Life GPS Works</h2>
+                <p class="section-subtitle">We've made getting your bearings simple.</p>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <h3>PLOT YOUR CURRENT COORDINATES</h3>
+                        <p>Rate your satisfaction across key areas of your life. This isn't a test; it's an honest check-in to establish your true starting point.</p>
+                    </div>
+                    <div class="step-item">
+                        <h3>GENERATE YOUR PERSONAL NAVIGATION MAP</h3>
+                        <p>Watch as your answers instantly create a visual map of your life. See the clear paths and the roadblocks at a single glance.</p>
+                    </div>
+                    <div class="step-item">
+                        <h3>GET TURN-BY-TURN INSIGHTS</h3>
+                        <p>Understand what your map reveals. You'll instantly see which areas need a detour and which are smooth sailing, giving you the clarity to move forward confidently.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2 class="section-title">Why Use a Life GPS?</h2>
+                <div class="why-list">
+                    <div class="why-item">
+                        <h3>Get Unstuck</h3>
+                        <p>Stop going in circles. Identify the areas where you're feeling lost or stagnant.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Clarify Your Destination</h3>
+                        <p>It's hard to navigate without a destination. This tool helps you define what "success" looks like in your own life.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Find the Most Efficient Route</h3>
+                        <p>Stop wasting energy on the wrong paths. Discover the highest-impact areas to focus on for maximum fulfillment.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Recalculate When Needed</h3>
+                        <p>Life is full of unexpected turns. Your Life GPS gives you a baseline, so you can always reassess and recalculate your route as things change.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Screen -->
+        <div id="faq-screen" style="display: none;">
+            <div class="faq-hero">
+                <h1>Frequently Asked Questions</h1>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-card">
+                    <h2>What is the Wheel of Life?</h2>
+                    <p>The Wheel of Life is a simple but powerful tool that helps you visualize all the important areas of your life at once. It is often used by life coaches and career coaches to give their clients a "bird's eye" view of their lives. By looking at a visual representation of all the areas of your life at once, the wheel helps you to better understand which of your life areas are flourishing and which ones need the most work.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>How do I use the Wheel of Life?</h2>
+                    <p>The online assessment tool is simple to use. Just click the button to start your wheel and the interactive system will guide you through the process of rating each area of your life, one at a time. When you are done, you can print your wheel, save it as a PDF, or share it with your friends on Facebook and other social media.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>How long does it take to fill out my wheel?</h2>
+                    <p>The assessment can usually be filled out in less than a minute.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>How much does it cost?</h2>
+                    <p>Our wheel of life is 100% free. No strings attached, and no catch!</p>
+                </div>
+
+                <div class="faq-card">
+                    <h2>Who is behind this?</h2>
+                    <p>This free assessment has been brought to you by the hard working folks at Noomii.com, the web's largest directory of life coaches and business coaches.</p>
+                </div>
+            </div>
+
+            <div class="faq-cta">
+                <button class="cta-btn" onclick="showUserDetailsScreen()">CONTINUE TO ASSESSMENT</button>
+            </div>
+        </div>
+
         <!-- User Details Form Screen -->
-        <div id="user-details-screen">
+        <div id="user-details-screen" style="display: none;">
             <h1>Welcome to Wheel of Life Assessment</h1>
             <p class="intro-text">Please fill in your details before we begin</p>
 

@@ -27,6 +27,25 @@ let comments = {};
 let previewChart = null;
 let resultChart = null;
 
+// Navigation functions
+function showFAQScreen() {
+    document.getElementById('landing-screen').style.display = 'none';
+    document.getElementById('faq-screen').style.display = 'block';
+    document.getElementById('user-details-screen').style.display = 'none';
+    document.getElementById('section-selection-screen').style.display = 'none';
+    document.getElementById('question-screen').style.display = 'none';
+    document.getElementById('result-screen').style.display = 'none';
+}
+
+function showUserDetailsScreen() {
+    document.getElementById('landing-screen').style.display = 'none';
+    document.getElementById('faq-screen').style.display = 'none';
+    document.getElementById('user-details-screen').style.display = 'block';
+    document.getElementById('section-selection-screen').style.display = 'none';
+    document.getElementById('question-screen').style.display = 'none';
+    document.getElementById('result-screen').style.display = 'none';
+}
+
 // Initialize the app
 function init() {
     // Set up user details form
@@ -543,8 +562,10 @@ function resetApp() {
     selectedCategories = [];
     userDetails = {};
 
-    // Reset all screens
-    document.getElementById('user-details-screen').style.display = 'block';
+    // Reset all screens - show landing screen
+    document.getElementById('landing-screen').style.display = 'block';
+    document.getElementById('faq-screen').style.display = 'none';
+    document.getElementById('user-details-screen').style.display = 'none';
     document.getElementById('section-selection-screen').style.display = 'none';
     document.getElementById('question-screen').style.display = 'none';
     document.getElementById('result-screen').style.display = 'none';
